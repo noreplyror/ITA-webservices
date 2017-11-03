@@ -1,0 +1,15 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+              "label.tokenized": {
+                  "operator": "or", "query": "algeria"
+              }
+          }
+        }
+      ]
+    }
+  }
+}

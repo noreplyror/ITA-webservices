@@ -1,0 +1,1095 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e2de1751-7803-4885-9982-f15928d84bf1
+      X-Runtime:
+      - '0.013943'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:52 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6def2b91-6743-425a-94da-9cee34b2e982
+      X-Runtime:
+      - '0.003879'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:52 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: UTF-8
+      string: '{"consolidated":false,"name":"","api":"","description":"Not gonna work","url":"","version_number":"1","s3_bucket_name":"","published":true}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 0e807ff7-a7fe-4a66-b132-67fbfe3df4e7
+      X-Runtime:
+      - '0.018768'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"errors":{"name":["can''t be blank"],"api":["can''t be blank","is
+        invalid"]}}'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:52 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8d52ea5a-580c-4e84-a643-cc022f4bc274
+      X-Runtime:
+      - '0.004054'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:52 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: UTF-8
+      string: '{"consolidated":false,"name":"Some human readable name","api":"success_cases","description":"Some
+        human readable desc","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","version_number":"1","s3_bucket_name":"","published":true}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - http://localhost:3000/data_sources/success_cases:v1
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"42481183c3e49833e00ce79fe6a459bc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c4117920-c1e9-4e01-9514-bdf8867a9ca7
+      X-Runtime:
+      - '0.435628'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:53.184Z","name":"Some
+        human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
+        Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
+        col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
+        string\n","data":"col1,col2\nc,ponies are nice\nd,horses are bigger\n","version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184Z","data_imported_at":"2017-05-31T17:14:53.184Z","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources/success_cases:v1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5977e76f2490a1e812f123c452f19ab9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8538653e-d4f8-4381-8be9-582f6c813ef2
+      X-Runtime:
+      - '0.011933'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:53.184Z","name":"Some
+        human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\ncol1:\n  source: col1\n  description:
+        Description of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
+        col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ebefc91ba90728e0e08edd26f7ed1312"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1d009e70-6b6f-494a-8800-d1cccb0347c0
+      X-Runtime:
+      - '0.008698'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:53.184Z","name":"Some
+        human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
+        Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
+        col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}]'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources/success_cases:v1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5977e76f2490a1e812f123c452f19ab9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f059efa4-54b9-48b1-8fc2-d0ed1ebdab5a
+      X-Runtime:
+      - '0.008637'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:53.184Z","name":"Some
+        human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\ncol1:\n  source: col1\n  description:
+        Description of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
+        col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:53 GMT
+- request:
+    method: put
+    uri: http://localhost:3000/data_sources/success_cases:v1.json
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:53.184Z","name":"Some
+        other human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\r\ncol1:\r\n  source: col1\r\n  description:
+        Description of col1\r\n  indexed: true\r\n  plural: false\r\n  type: enum\r\ncol2:\r\n  source:
+        col2\r\n  description: Description of col2\r\n  indexed: true\r\n  plural:
+        false\r\n  type: string\r\n","data":null,"version_number":"1","published":"1","consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1e2be0bdbb123c7ebd9575817602214b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ae933830-891c-406f-b6a3-0f02b4a24e3d
+      X-Runtime:
+      - '0.138773'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:53.383Z","name":"Some
+        other human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
+        Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
+        col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
+        string\n","data":"col1,col2\nc,ponies are nice\nd,horses are bigger\n","version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources/success_cases:v1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fec26010f6fab08f87eada875247e8a5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - de9bc831-6331-43cc-970a-40d7c71f7bd5
+      X-Runtime:
+      - '0.033770'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:53.383Z","name":"Some
+        other human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\ncol1:\n  source: col1\n  description:
+        Description of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
+        col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c20e56c27d8452e58b4469d06e597ea9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - be3a0c5b-b94c-4c81-b8bd-c4c1a2804868
+      X-Runtime:
+      - '0.010425'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:53.383Z","name":"Some
+        other human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
+        Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
+        col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}]'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c20e56c27d8452e58b4469d06e597ea9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8a91b3dd-2312-4660-8ec3-d723bf6ef7e1
+      X-Runtime:
+      - '0.008460'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:53.383Z","name":"Some
+        other human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
+        Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
+        col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}]'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources/success_cases:v1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fec26010f6fab08f87eada875247e8a5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 52cef047-9ed8-4b8d-b6d1-d406bc21eb00
+      X-Runtime:
+      - '0.010680'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:53.383Z","name":"Some
+        other human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\ncol1:\n  source: col1\n  description:
+        Description of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
+        col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c20e56c27d8452e58b4469d06e597ea9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3e7751c2-cdf9-44db-b41c-f76aab45342a
+      X-Runtime:
+      - '0.008442'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:53.383Z","name":"Some
+        other human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
+        Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
+        col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}]'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources/success_cases:v1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fec26010f6fab08f87eada875247e8a5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b0cabe5f-716c-49c4-be83-a8a2a9a0b374
+      X-Runtime:
+      - '0.010266'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:53.383Z","name":"Some
+        other human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\ncol1:\n  source: col1\n  description:
+        Description of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
+        col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c20e56c27d8452e58b4469d06e597ea9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4c529d66-4f4a-46c9-bd60-b93be7f31c17
+      X-Runtime:
+      - '0.008010'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:53.383Z","name":"Some
+        other human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
+        Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
+        col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}]'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources/success_cases:v1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fec26010f6fab08f87eada875247e8a5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5bac6b71-1027-4d92-99bf-af0c31cbafe6
+      X-Runtime:
+      - '0.008480'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:53.383Z","name":"Some
+        other human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\ncol1:\n  source: col1\n  description:
+        Description of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
+        col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:53 GMT
+- request:
+    method: put
+    uri: http://localhost:3000/data_sources/success_cases:v1.json
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:53.383Z","name":"","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\r\ncol1:\r\n  source: col1\r\n  description:
+        Description of col1\r\n  indexed: true\r\n  plural: false\r\n  type: enum\r\ncol2:\r\n  source:
+        col2\r\n  description: Description of col2\r\n  indexed: true\r\n  plural:
+        false\r\n  type: string\r\n","data":null,"version_number":"1","published":"1","consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 0c84caaf-8ad5-4a34-a06a-7018a4f48da7
+      X-Runtime:
+      - '0.005826'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"errors":{"name":["can''t be blank"]}}'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c20e56c27d8452e58b4469d06e597ea9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3cc13f7e-8333-4f1a-9227-be5c14ff9213
+      X-Runtime:
+      - '0.009440'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:53.383Z","name":"Some
+        other human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
+        Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
+        col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}]'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/v1/success_cases/search?q=pony
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - localhost:3000
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fa88aeee4e2beca6cb7f1adaba177e7c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4de05aa6-2b23-479e-b464-dca92203cd32
+      X-Runtime:
+      - '0.035023'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"total":1,"offset":0,"sources_used":[{"source":"Some other human readable
+        name","source_last_updated":"2017-05-31T17:14:53.184+00:00","last_imported":"2017-05-31T17:14:53.184+00:00"}],"search_performed_at":"2017-05-31T17:14:53.874Z","results":[{"id":"6982cd2dd350cc4d0729de5db16502da176fa5d6","col1":"c","col2":"ponies
+        are nice"}]}'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/v1/success_cases/freshen
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - localhost:3000
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"28c8e52ad786b57594ece168677963da"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 135535f9-5987-456f-bbbe-c947f2e558c3
+      X-Runtime:
+      - '0.423991'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"success":"success_cases:v1 API freshened"}'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:54 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4ab5cde7503e3517afcaab89c7a28e34"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9546c28d-ec46-4082-bf36-8a5ee4d0fe09
+      X-Runtime:
+      - '0.010748'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:54.301Z","name":"Some
+        other human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
+        Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
+        col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":"f1d59c21827e26fc4ba6daadba6c4c3bb311e698","data_changed_at":"2017-05-31T17:14:54.301+00:00","data_imported_at":"2017-05-31T17:14:54.301+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}]'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:54 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources/success_cases:v1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"102ddfe3eda821cbd0553a28ba9e6273"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 377b63f7-3b50-4027-bafb-d6278badce34
+      X-Runtime:
+      - '0.008068'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:54.301Z","name":"Some
+        other human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\ncol1:\n  source: col1\n  description:
+        Description of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
+        col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":"f1d59c21827e26fc4ba6daadba6c4c3bb311e698","data_changed_at":"2017-05-31T17:14:54.301+00:00","data_imported_at":"2017-05-31T17:14:54.301+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:54 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4ab5cde7503e3517afcaab89c7a28e34"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a99ea9c4-4fea-4e14-830b-421f3542562d
+      X-Runtime:
+      - '0.008793'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:54.301Z","name":"Some
+        other human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
+        Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
+        col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":"f1d59c21827e26fc4ba6daadba6c4c3bb311e698","data_changed_at":"2017-05-31T17:14:54.301+00:00","data_imported_at":"2017-05-31T17:14:54.301+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}]'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:54 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources/success_cases:v1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"102ddfe3eda821cbd0553a28ba9e6273"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1a5be965-3f34-43d6-9fd9-1bf9f3aa7dfb
+      X-Runtime:
+      - '0.018401'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-05-31T17:14:53.173Z","updated_at":"2017-05-31T17:14:54.301Z","name":"Some
+        other human readable name","api":"success_cases","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Some
+        human readable desc","dictionary":"---\ncol1:\n  source: col1\n  description:
+        Description of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
+        col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":"f1d59c21827e26fc4ba6daadba6c4c3bb311e698","data_changed_at":"2017-05-31T17:14:54.301+00:00","data_imported_at":"2017-05-31T17:14:54.301+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:54 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/data_sources/success_cases:v1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - c13d212e-da37-4720-b280-d99170cdd1e5
+      X-Runtime:
+      - '0.029578'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:54 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 410dcd15-303c-4d15-aaea-4d844b51cf43
+      X-Runtime:
+      - '0.003546'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Wed, 31 May 2017 17:14:54 GMT
+recorded_with: VCR 3.0.3

@@ -1,0 +1,20 @@
+{
+  "query": {
+    "bool": {
+      "filter": {
+        "bool": {
+          "must": [
+            {
+              "terms": {
+                "label.keyword": [
+                  "China",
+                  "North America"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
