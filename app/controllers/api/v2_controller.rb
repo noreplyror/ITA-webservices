@@ -12,7 +12,7 @@ class Api::V2Controller < ApiController
     api_key = params[:api_key] || request.headers['Api-Key']
 
     unless api_key && User.to_adapter.find_first(api_key: api_key)
-      render json: { error: 'Unauthorized - Please get a new key at https://api.trade.gov' }, status: :unauthorized
+      render json: { error: 'Unauthorized - Please get a new key at https://localhost:3000' }, status: :unauthorized
     end
   end
 

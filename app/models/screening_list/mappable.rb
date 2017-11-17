@@ -1,11 +1,12 @@
 module ScreeningList
   module Mappable
     def self.included(klass)
+      binding.pry
       klass.import_rate = 'Hourly'
       klass.analyze_by :snowball_asciifolding_nostop, :standard_asciifolding_nostop, :keyword_asciifolding_lowercase, :keyword_asciifolding_uppercase
 
       klass.settings.freeze
-
+      binding.pry
       klass.mappings = {
         klass.name.typeize => {
           properties: {

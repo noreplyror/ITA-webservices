@@ -35,6 +35,7 @@ class ApiController < ActionController::Base
       format.csv { serve_sv('csv') }
       format.tsv { serve_sv('tsv') }
       format.json do
+        binding.pry
         @query_info_fields = query_info_fields
         @search =
           if s[:size].to_i == -1
