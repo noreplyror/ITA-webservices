@@ -37,6 +37,7 @@ module Webservices
     # config.cache_store = :memory_store
 
     def model_classes
+        binding.pry
       filenames = Dir[Rails.root.join('app/models/**/*.rb').to_s]
       filenames.select do |filename|
         filename !~ /\/concerns\//
